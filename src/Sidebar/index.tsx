@@ -1,10 +1,7 @@
 import React, { FC } from "react";
 
 export type SidebarItems = {
-    itens: [{
-        link: string,
-        name: string,
-    }]
+    itens:  [React.ReactNode]
 }
 
 const Sidebar: FC<SidebarItems> = ({ itens }) => {
@@ -15,9 +12,11 @@ const Sidebar: FC<SidebarItems> = ({ itens }) => {
             overflowY: 'auto',
             backgroundColor: '#e6e6e6',
             padding: '15px',
+            display: 'flex',
+            flexDirection: 'column'
         }}>
             {
-                itens.map(item => (<a href={item.link}>{item.name}</a>))
+             itens.map(Element => Element)
             }
         </aside>
     )
