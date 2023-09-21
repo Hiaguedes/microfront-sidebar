@@ -3,9 +3,7 @@ import Sidebar from './Sidebar';
 
 const App = () => {
     return(
-    <Sidebar itens={[
-        {link: 'teste1', name: 'Teste 1'}
-    ]} />)
+    <Sidebar itens={[<p>teste 1</p>, <p>teste 2</p>]} />)
     
 }
 
