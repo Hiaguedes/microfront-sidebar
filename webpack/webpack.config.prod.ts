@@ -1,18 +1,13 @@
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import path from "path";
 import { Configuration } from 'webpack'
-// in case you run into any typescript error when configuring `devServer`
-import 'webpack-dev-server';
 import moduleFederationConfig from "./moduleFederation";
 
 const config: Configuration = {
-    entry: "./src/index.tsx",
+    entry: "./index.tsx",
     mode: "production",
     output: {
         publicPath: 'auto',
-    },
-    devServer: {
-        historyApiFallback: true,
     },
     module: {
         rules: [
